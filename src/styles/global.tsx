@@ -6,4 +6,5 @@ export const Container = styled('div')(({theme}) => `
     position: fixed;
     width: 100%;
     overflow-y: scroll;
+    padding: ${theme.spacing(10)};
 `,)

@@ -1,5 +1,6 @@
 export const localStorageEffect =
   (key: string) =>
+  //@ts-ignore
   ({ setSelf, onSet }) => {
     const savedValue = localStorage.getItem(key);
 
