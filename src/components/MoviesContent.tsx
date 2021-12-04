@@ -16,7 +16,7 @@ const MoviesContent: React.FC<MoviesContentProps> = ({ moviesData }) => {
     return (<StyledGrid item xs={4} sm={4} lg={4}>
         {moviesData?.map((movie: any) => <MovieContainer key={movie.episode_id} 
         onClick={() => {setSelectedMovieState(movie)}} isselected={(selectedMovieState.episode_id === movie.episode_id).toString()}>
-                <Title>Movie title: {movie.title}</Title>
+                <Title>{movie.title}</Title>
             </MovieContainer>)}
     </StyledGrid>)
 }

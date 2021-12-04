@@ -36,6 +36,7 @@ export const TopContainer = styled(Typography)(({theme}) => ({
 }))
 
 export const DescriptionContainer = styled(Grid)(({theme}) => ({
+    background: '#1e1e46',
     border: '1px solid white',
     borderRadius: theme?.spacing(0.5),
     padding: theme?.spacing(1.5),
