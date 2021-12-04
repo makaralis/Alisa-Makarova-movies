@@ -3,7 +3,7 @@ import { useRecoilValue } from "recoil";
 import { favoriteMoviesAtom } from "../recoil/favorite-movies/atoms";
 import { MovieContainer, Abstract, Title } from '../styles/moviesContent';
 import { useTheme } from "@mui/system";
-import { Typography, Box, Paper } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 import { StyledPaper } from "../styles/favoriteMovies";
 
 
