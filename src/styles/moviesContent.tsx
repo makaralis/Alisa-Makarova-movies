@@ -13,6 +13,13 @@ export const MovieContainer = styled('div')(({theme, isselected}: {theme?: Theme
     }
 }))
 
+export const StyledGrid = styled(Grid)(({theme}) => ({
+    margin: theme.spacing(1,3),
+    [theme.breakpoints.down('sm')]: {
+        margin: 0,
+    }
+}))
+
 export const Abstract = styled(Typography)(({theme}) => ({
 }))
 
@@ -33,4 +40,7 @@ export const DescriptionContainer = styled(Grid)(({theme}) => ({
     borderRadius: theme?.spacing(0.5),
     padding: theme?.spacing(1.5),
     margin: theme?.spacing(0, 3),
+    [theme.breakpoints.down('sm')]: {
+        marginLeft: theme?.spacing(1),
+    }
 }))

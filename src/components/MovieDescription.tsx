@@ -1,7 +1,6 @@
 
 import React from "react";
 import {  IconButton } from "@mui/material";
-import { useTheme } from '@mui/system';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { Abstract, Title, TopContainer } from '../styles/moviesContent';
@@ -14,7 +13,6 @@ import { DescriptionContainer } from "../styles/moviesContent";
 const MovieDescription= () => {
     const selectedMovieState = useRecoilValue(selectedMovieAtom);
     const [favoriteMoviesState, setFavoriteMoviesState] = useRecoilState(favoriteMoviesAtom);
-    const theme = useTheme();
 
     const addToFavorites = (movie: any) => {
         const favoriteMoviesCopy = [...favoriteMoviesState];

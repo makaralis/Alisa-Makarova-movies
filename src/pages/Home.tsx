@@ -1,22 +1,19 @@
 
 import React from "react";
-import { Grid } from "@mui/material";
 import MoviesContent from "../components/MoviesContent";
-import { useTheme } from '@mui/system';
 import MovieDescription from "../components/MovieDescription";
+import { StyledGrid } from '../styles/moviesContent';
 
 interface HomePageProps {
     moviesData: any;
 }
 
-const HomePage: React.FC<HomePageProps> = ({ moviesData }) => {
-    const theme = useTheme();
-
-    return (<Grid container spacing={2} sx={{margin: theme.spacing(1,3)}}>
+const HomePage: React.FC<HomePageProps> = ({ moviesData }) => (
+    <StyledGrid container  direction="row" justifyContent="center" spacing={2}>
         <MoviesContent moviesData={moviesData}/>
         <MovieDescription/>
-    </Grid>)
-}
+    </StyledGrid>
+)
 
 
 export default HomePage;
