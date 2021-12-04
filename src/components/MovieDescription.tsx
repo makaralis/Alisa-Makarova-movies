@@ -32,7 +32,7 @@ const MovieDescription= () => {
 
     return (<DescriptionContainer item xs={6} sm={6} lg={6}>
             <TopContainer>
-                <Title>{selectedMovieState.title}</Title>
+                <Title variant='h5'>{selectedMovieState.title}</Title>
                 {favoriteMoviesState.some((favoriteMovie: any) => favoriteMovie.episode_id === selectedMovieState.episode_id)
                     ? <IconButton onClick={() => removeFromFavorites(selectedMovieState)} sx={{marginBottom: '10px'}}>
                     <FavoriteIcon fontSize="large" color={"primary"}/>

@@ -12,21 +12,22 @@ const FavoritesPage = () => {
     const theme = useTheme();
 
     return (
-    <Box sx={{ flexGrow: 1, overflow: 'hidden', px: 3 }}>
+    <Box sx={{ flexGrow: 1, overflow: 'hidden', px: 3, marginTop: theme.spacing(3) }}>
         <StyledPaper sx={{maxWidth:700, my: 1, mx: 'auto', p: 2}}>
             <Grid container
                 direction="column"
                 justifyContent="center"
                 alignItems="center"
                 wrap="nowrap"
-                sx={{padding: theme.spacing(1,3), textAlign: 'center'}}
-                >
+                sx={{padding: theme.spacing(1,3), textAlign: 'center'}}>
                 <Typography variant='h3' sx={{paddingBottom: theme.spacing(2), fontWeight: 700, color: '#230932'}}>Favorite movies</Typography>
-                {favoriteMoviesState.map((favoriteMovie: any) => <MovieContainer key={favoriteMovie.episode_id}>
+                {favoriteMoviesState.length === 0 ? <Title sx={{color: 'white'}}>There are no favorite movies right now</Title> :
+                favoriteMoviesState.map((favoriteMovie: any) => <MovieContainer key={favoriteMovie.episode_id}>
                 <Title>{favoriteMovie.title}</Title>
                 <Abstract>{favoriteMovie.opening_crawl}</Abstract>
                 </MovieContainer> 
-            )}</Grid>
+                )}
+            </Grid>
         </StyledPaper>
     </Box>)
 }

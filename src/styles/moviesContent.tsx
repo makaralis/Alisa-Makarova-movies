@@ -16,7 +16,7 @@ export const MovieContainer = styled('div')(({theme, isselected}: {theme?: Theme
 export const StyledGrid = styled(Grid)(({theme}) => ({
     margin: theme.spacing(1,3),
     [theme.breakpoints.down('sm')]: {
-        margin: 0,
+        margin: theme.spacing(2,0,0,0)
     }
 }))
 

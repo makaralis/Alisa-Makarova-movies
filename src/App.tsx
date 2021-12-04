@@ -7,6 +7,7 @@ import { useTheme } from "@mui/system";
 import HomePage from './pages/Home';
 import FavoritesPage from './pages/Favorites';
 import { Container } from './styles/global';
+import Navbar from './components/Navbar';
 
 const App = () => {
   const [moviesData, setMoviesData] = useState();
@@ -39,12 +40,15 @@ const App = () => {
       {loading ? <Grid container
               direction="column"
               justifyContent="center"
-              alignItems="center"><CircularProgress size={35} />
-              <Typography sx={{marginTop: theme.spacing(2)}} variant='h6'>Loading the data...</Typography></Grid> : 
+              alignItems="center" sx={{paddingTop: theme.spacing(5)}}><CircularProgress size={35} />
+              <Typography sx={{marginTop: theme.spacing(2)}} variant='h6'>Loading the data...</Typography></Grid> :
+      <> 
+      <Navbar/>
       <Routes>
           <Route path="/" element={<HomePage moviesData={moviesData}/>} />
           <Route path="favorite-movies/*" element={<FavoritesPage />} />
-      </Routes>}
+      </Routes>
+      </>}
     </Container>
   );
 }

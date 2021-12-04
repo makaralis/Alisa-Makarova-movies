@@ -9,7 +9,7 @@ interface HomePageProps {
 }
 
 const HomePage: React.FC<HomePageProps> = ({ moviesData }) => (
-    <StyledGrid container  direction="row" justifyContent="center" spacing={2}>
+    <StyledGrid sx={{display: 'flex', flexDirection: 'row', justifyContent: 'center', marginTop: '60px'}}>
         <MoviesContent moviesData={moviesData}/>
         <MovieDescription/>
     </StyledGrid>
