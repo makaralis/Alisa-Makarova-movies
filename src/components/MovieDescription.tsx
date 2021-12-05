@@ -42,7 +42,9 @@ const MovieDescription= () => {
                     :  <IconButton onClick={() => addToFavorites(selectedMovieState)} sx={{marginBottom: '10px'}}>
                     <FavoriteBorderIcon fontSize="large" color={"primary"}/>
                     </IconButton>
-                : null}</TopContainer>
+                : <IconButton onClick={() => addToFavorites(selectedMovieState)} sx={{marginBottom: '10px'}}>
+                <FavoriteBorderIcon fontSize="large" color={"primary"}/>
+                </IconButton>}</TopContainer>
             <Abstract>{selectedMovieState.opening_crawl}</Abstract></>: null}
     </DescriptionContainer>)
 }
