@@ -5,6 +5,7 @@ import { MovieContainer, Abstract, Title } from '../styles/moviesContent';
 import { useTheme } from "@mui/system";
 import { Typography, Box } from "@mui/material";
 import { StyledPaper } from "../styles/favoriteMovies";
+import { MovieData } from '../helpers';
 
 
 const FavoritesPage = () => {
@@ -22,7 +23,7 @@ const FavoritesPage = () => {
                 sx={{padding: theme.spacing(1,3), textAlign: 'center'}}>
                 <Typography variant='h3' sx={{paddingBottom: theme.spacing(2), fontWeight: 700, color: '#230932'}}>Favorite movies</Typography>
                 {favoriteMoviesState.length === 0 ? <Title sx={{color: 'white'}}>There are no favorite movies right now</Title> :
-                favoriteMoviesState.map((favoriteMovie: any) => <MovieContainer key={favoriteMovie.episode_id}>
+                favoriteMoviesState.map((favoriteMovie: MovieData) => <MovieContainer key={favoriteMovie.episode_id}>
                 <Title>{favoriteMovie.title}</Title>
                 <Abstract>{favoriteMovie.opening_crawl}</Abstract>
                 </MovieContainer> 

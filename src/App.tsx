@@ -9,6 +9,7 @@ import FavoritesPage from './pages/Favorites';
 import { Container } from './styles/global';
 import Navbar from './components/Navbar';
 
+
 const App = () => {
   const [moviesData, setMoviesData] = useState();
   const [loading, setLoading] = useState<Boolean>(true);
@@ -19,7 +20,7 @@ const App = () => {
       try {
           const res = await axios.get("https://swapi.dev/api/films");
 
-          if (res && res.data.results) {
+          if (res && res.data.results) {                            
               setMoviesData(res.data.results);
               setLoading(false);
           }
